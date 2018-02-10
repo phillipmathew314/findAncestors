@@ -22,7 +22,6 @@ bool checkThrough(vector<bool>& visited, const vector<vector<int>>& adjMatrix, i
 }
 
 bool haveSharedAncestor(const vector<vector<int>>& pairs, int nodeA, int nodeB) {
-  // IMPLEMENTATION GOES HERE
   vector<vector<int>> adjMatrix = vector<vector<int>>(pairs.size()+2, vector<int>(pairs.size()+2, 0));
   
   for (size_t i = 0; i < pairs.size(); i++) {
@@ -38,24 +37,6 @@ bool haveSharedAncestor(const vector<vector<int>>& pairs, int nodeA, int nodeB) 
   return result;
 }
 
-
-// You can add test cases below. Each test case should be an instance of Test
-// initialized with:
-//
-// {
-//   // name
-//   "my custom test",
-//   // pairs
-//   ...,
-//   // nodeA
-//   ...,
-//   // nodeB
-//   ...,
-//   // expected output
-//   ...
-// }
-//
-
 class Test {
 public:
   string name;
@@ -64,8 +45,6 @@ public:
   int nodeB;
   bool expectedOutput;
 };
-
-// START TEST CASES
 
 const vector<Test> tests = {
   {
@@ -132,9 +111,6 @@ const vector<Test> tests = {
     true
   }
 };
-
-// END TEST CASES
-// DO NOT MODIFY BELOW THIS LINE
 
 bool equalOutputs(bool a, bool b) {
   return a == b;
